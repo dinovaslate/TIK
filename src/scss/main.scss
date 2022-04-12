@@ -272,57 +272,58 @@ span.ripple{
             right: 2px;
         }
     }
-    .accordion{
-        .accordion-head{
-            background: white;
-            border-bottom: 1px solid #ccc;
-            border-top: 1px solid #ccc;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1.2em 1.6em;
-            font-weight: bold;
-            font-size: 1.3rem;
+    
+}
+.accordion{
+    .accordion-head{
+        background: white;
+        border-bottom: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.2em 1.6em;
+        font-weight: bold;
+        font-size: 1.3rem;
 
-            &.active{
-                i{
-                    transform: rotate(180deg);
-                }
+        &.active{
+            i{
+                transform: rotate(180deg);
             }
         }
-        .accordion-body{
-            max-height: 0;
-            overflow: hidden;
-            box-sizing: border-box;
-            transition: 350ms ease-in-out;
-            padding: 0 1.6em;
-            
-            &.active{
-                padding: 1.2em 1.6em;
-                max-height: 145px;
-            }
-            input{
-                margin-top: 10px;
-            }
-            input[type="checkbox"]:before{
-                position: relative;
-                display: block;
-               aspect-ratio: 1/1;
-               width: 14px;
-               border: 1px solid #ccc;
-               border-radius: 2px;
-                content: "";
-                background: #FFF;
-                transition: 150ms ease-in-out;
-            }
-            input[type="checkbox"]:checked:before{
-                box-shadow: inset 0 0 0 3px lighten($color: #000000, $amount: 30%);
-            }
-            label{
-                font-family: TTCommons;
-                font-weight: 600;
-                margin-left: 0.5rem;
-            }
+    }
+    .accordion-body{
+        max-height: 0;
+        overflow: hidden;
+        box-sizing: border-box;
+        transition: 350ms ease-in-out;
+        padding: 0 1.6em;
+        
+        &.active{
+            padding: 1.2em 1.6em;
+            max-height: 145px;
+        }
+        input{
+            margin-top: 10px;
+        }
+        input[type="checkbox"]:before{
+            position: relative;
+            display: block;
+           aspect-ratio: 1/1;
+           width: 14px;
+           border: 1px solid #ccc;
+           border-radius: 2px;
+            content: "";
+            background: #FFF;
+            transition: 150ms ease-in-out;
+        }
+        input[type="checkbox"]:checked:before{
+            box-shadow: inset 0 0 0 3px lighten($color: #000000, $amount: 30%);
+        }
+        label{
+            font-family: TTCommons;
+            font-weight: 600;
+            margin-left: 0.5rem;
         }
     }
 }
@@ -363,6 +364,7 @@ span.ripple{
         column-gap: minmax(0.6rem, 1.5rem);
         grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
         overflow-y:auto !important;
+        padding-block-end: 2rem;
     }
     .card{
         background: rgba(255, 255, 255, 0.662);
