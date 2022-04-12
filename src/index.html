@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="scss/main.scss" />
+    <script
+      src="https://kit.fontawesome.com/add302fba6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="navbar border-1">
+      <div class="navbar-brand">Shoe.</div>
+      <div style="position: relative">
+        <input type="text" class="search-bar" placeholder="Black Sneakers" />
+        <i class="fa-solid fa-magnifying-glass search-icon font-inherit"></i>
+      </div>
+      <div class="right-nav">
+        <button class="nav-button" onclick="buttonRiple(event)">Login</button>
+        <div style="position: relative">
+          <i class="fa-solid fa-bag-shopping font-inherit has-badge"></i>
+          <div class="badge">3</div>
+        </div>
+        <img class="avatar bordered" src="static/avatar.jpg" />
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="accordion">
+        <div class="accordion-head">
+          Categories
+          <i class="fa-solid fa-angle-down font-inherit"></i>
+        </div>
+        <div class="accordion-body">
+          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+          <label for="vehicle1"> Flip flops</label><br />
+          <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
+          <label for="vehicle2"> Sneakers</label><br />
+          <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
+          <label for="vehicle3"> Lace-up Shoes</label><br />
+          <input type="checkbox" id="vehicle4" name="vehicle4" value="Boat" />
+          <label for="vehicle3">Shoe Accessories </label>
+        </div>
+        <div class="accordion-head">
+          Brand
+          <i class="fa-solid fa-angle-down font-inherit"></i>
+        </div>
+        <div class="accordion-body">
+          <input type="checkbox" id="Nike" name="Nike" value="Bike" />
+          <label for="Nike"> Nike</label><br />
+          <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
+          <label for="vehicle2"> Adidas</label><br />
+          <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
+          <label for="vehicle3"> Rebook</label><br />
+          <input type="checkbox" id="vehicle4" name="vehicle4" value="Boat" />
+          <label for="vehicle3">Jordan </label>
+        </div>
+      </div>
+      <div class="sidebar-item">
+        <div class="sidebar-item-title">Price Range</div>
+        <div class="container">
+          <div class="values" id="label-1">0</div>
+          <div class="values" id="label-2">0</div>
+          <div class="slider-track"></div>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="100"
+            id="slider-1"
+            oninput="slideOne(event)"
+          />
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            id="slider-2"
+            oninput="slideTwo(event)"
+          />
+        </div>
+      </div>
+      <div class="sidebar-item">
+        <div class="sidebar-item-title">Size</div>
+        <div class="grid col-5">
+          <div class="grid-item">35</div>
+          <div class="grid-item">36</div>
+          <div class="grid-item">37</div>
+          <div class="grid-item">38</div>
+          <div class="grid-item">39</div>
+          <div class="grid-item">40</div>
+          <div class="grid-item">41</div>
+          <div class="grid-item">42</div>
+          <div class="grid-item">43</div>
+          <div class="grid-item">44</div>
+          <div class="grid-item">45</div>
+          <div class="grid-item">46</div>
+          <div class="grid-item">47</div>
+          <div class="grid-item">48</div>
+          <div class="grid-item">49</div>
+        </div>
+      </div>
+      <div class="sidebar-item">
+        <div class="box black">
+          <div class="content">
+            <div class="title">
+              <div class="iconbox">
+                <i class="fa-solid fa-lightbulb font-inherit"></i>
+              </div>
+              Need Help
+            </div>
+            <div class="text">
+              Visit Our Contact Page. Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit.
+            </div>
+          </div>
+          <div class="box blue"></div>
+          <div class="box orange"></div>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="flex-title">
+        <div class="title">New Arrival</div>
+        <div class="sort" onclick="toggle('#menu-sort')">
+          <span id="title-1" onclick="buttonRiple(e)">Sort By Price</span>
+          <i class="fa-solid fa-angle-down font-inherit"></i>
+          <div class="menu-list" id="menu-sort" has-title="#title-1">
+            <li>Sort by Newest</li>
+            <li>Sort by Popularity</li>
+            <li>Sort by Price</li>
+          </div>
+        </div>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-title">
+            High Speed Sneakers
+            <div class="card-subtitle">Balenciaga</div>
+          </div>
+          <img src="static/sepatu.png" class="card-image rotate" alt="sepatu" />
+          <div class="card-footer">
+            <div class="card-price">
+              Price
+              <div class="price">$790</div>
+            </div>
+            <div class="right-footer">
+              <div class="image-box" onclick="buttonRiple(event, '#ccc')">
+                <img
+                  src="static/sepatu.png"
+                  class="reflect-left"
+                  alt="sepatu"
+                  width="40"
+                />
+              </div>
+              <div class="image-box" onclick="buttonRiple(event, '#ccc')">
+                <img
+                  src="static/sepatu.png"
+                  class="reflect-right"
+                  alt="sepatu"
+                  width="40"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">
+            High Speed Sneakers
+            <div class="card-subtitle">Balenciaga</div>
+          </div>
+          <img src="static/sepatu.png" class="card-image rotate" alt="sepatu" />
+          <div class="card-footer">
+            <div class="card-price">
+              Price
+              <div class="price">$790</div>
+            </div>
+            <div class="right-footer">
+              <div class="image-box" onclick="buttonRiple(event, '#ccc')">
+                <img
+                  src="static/sepatu.png"
+                  class="reflect-left"
+                  alt="sepatu"
+                  width="40"
+                />
+              </div>
+              <div class="image-box" onclick="buttonRiple(event, '#ccc')">
+                <img
+                  src="static/sepatu.png"
+                  class="reflect-right"
+                  alt="sepatu"
+                  width="40"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">
+            High Speed Sneakers
+            <div class="card-subtitle">Balenciaga</div>
+          </div>
+          <img src="static/sepatu.png" class="card-image rotate" alt="sepatu" />
+          <div class="card-footer">
+            <div class="card-price">
+              Price
+              <div class="price">$790</div>
+            </div>
+            <div class="right-footer">
+              <div class="image-box" onclick="buttonRiple(event, '#ccc')">
+                <img
+                  src="static/sepatu.png"
+                  class="reflect-left"
+                  alt="sepatu"
+                  width="40"
+                />
+              </div>
+              <div class="image-box" onclick="buttonRiple(event, '#ccc')">
+                <img
+                  src="static/sepatu.png"
+                  class="reflect-right"
+                  alt="sepatu"
+                  width="40"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">
+            High Speed Sneakers
+            <div class="card-subtitle">Balenciaga</div>
+          </div>
+          <img src="static/sepatu.png" class="card-image rotate" alt="sepatu" />
+          <div class="card-footer">
+            <div class="card-price">
+              Price
+              <div class="price">$790</div>
+            </div>
+            <div class="right-footer">
+              <div class="image-box" onclick="buttonRiple(event, '#ccc')">
+                <img
+                  src="static/sepatu.png"
+                  class="reflect-left"
+                  alt="sepatu"
+                  width="40"
+                />
+              </div>
+              <div class="image-box" onclick="buttonRiple(event, '#ccc')">
+                <img
+                  src="static/sepatu.png"
+                  class="reflect-right"
+                  alt="sepatu"
+                  width="40"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">
+            High Speed Sneakers
+            <div class="card-subtitle">Balenciaga</div>
+          </div>
+          <img src="static/sepatu.png" class="card-image rotate" alt="sepatu" />
+          <div class="card-footer">
+            <div class="card-price">
+              Price
+              <div class="price">$790</div>
+            </div>
+            <div class="right-footer">
+              <div class="image-box" onclick="buttonRiple(event, '#ccc')">
+                <img
+                  src="static/sepatu.png"
+                  class="reflect-left"
+                  alt="sepatu"
+                  width="40"
+                />
+              </div>
+              <div class="image-box" onclick="buttonRiple(event, '#ccc')">
+                <img
+                  src="static/sepatu.png"
+                  class="reflect-right"
+                  alt="sepatu"
+                  width="40"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">
+            High Speed Sneakers
+            <div class="card-subtitle">Balenciaga</div>
+          </div>
+          <img src="static/sepatu.png" class="card-image rotate" alt="sepatu" />
+          <div class="card-footer">
+            <div class="card-price">
+              Price
+              <div class="price">$790</div>
+            </div>
+            <div class="right-footer">
+              <div class="image-box" onclick="buttonRiple(event, '#ccc')">
+                <img
+                  src="static/sepatu.png"
+                  class="reflect-left"
+                  alt="sepatu"
+                  width="40"
+                />
+              </div>
+              <div class="image-box" onclick="buttonRiple(event, '#ccc')">
+                <img
+                  src="static/sepatu.png"
+                  class="reflect-right"
+                  alt="sepatu"
+                  width="40"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.onload = function () {
+        slideOne();
+        slideTwo();
+      };
+
+      let sliderOne = document.getElementById("slider-1");
+      let sliderTwo = document.getElementById("slider-2");
+
+      let minGap = 0;
+      let sliderTrack = document.querySelector(".slider-track");
+      let sliderMaxValue = document.getElementById("slider-1").max;
+
+      function slideOne(e) {
+        let values = document.querySelector("#label-1");
+        setBubble(sliderOne, values);
+        fillColor();
+      }
+      function slideTwo() {
+        let values = document.querySelector("#label-2");
+        setBubble(sliderTwo, values);
+
+        fillColor();
+      }
+      function setBubble(range, bubble) {
+        const val = range.value;
+        const min = range.min ? range.min : 0;
+        const max = range.max ? range.max : 100;
+        const newVal = Number(((val - min) * 100) / (max - min));
+        bubble.innerHTML = `${val * 20}$`;
+        bubble.style.left = `calc(${newVal}% + (${10 - newVal * 0.2}px))`;
+      }
+      const buttonRiple = (event, color = "#fff6") => {
+        ripple(event.currentTarget, event, 20, color);
+      };
+      function fillColor() {
+        percent1 = (sliderOne.value / sliderMaxValue) * 100;
+        percent2 = (sliderTwo.value / sliderMaxValue) * 100;
+        if (percent2 < percent1) {
+          let temp = percent1;
+          percent1 = percent2;
+          percent2 = temp;
+        }
+        sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #3264fe ${percent1}% , #3264fe ${percent2}%, #dadae5 ${percent2}%)`;
+      }
+      function ripple(parent, event, maxScale, color) {
+        parent.style.position = "relative";
+        parent.style.overflow = "hidden";
+        const rect = parent.getBoundingClientRect();
+        const ripple = document.createElement("span");
+        ripple.classList.add("ripple");
+        ripple.style.left = `${event.clientX - rect.x}px`;
+        ripple.style.top = `${event.clientY - rect.y}px`;
+        ripple.style.setProperty("--size", maxScale);
+        ripple.style.setProperty("--color", color);
+        const hasripple = parent.getElementsByClassName("ripple")[0];
+        if (hasripple) {
+          hasripple.remove();
+        }
+        parent.appendChild(ripple);
+        setTimeout(() => {
+          ripple.remove();
+        }, 1200);
+      }
+      let accheads = document.querySelectorAll(".accordion-head");
+      for (const acchead of accheads) {
+        acchead.addEventListener("click", (event) => {
+          acchead.classList.toggle("active");
+          acchead.nextSibling.nextSibling.classList.toggle("active");
+          ripple(event.currentTarget, event, 100, "#ccc");
+        });
+      }
+      let grids = document.querySelectorAll(".grid-item");
+      for (const grid of grids) {
+        grid.addEventListener("click", (event) => {
+          ripple(event.currentTarget, event, 20, "#fff");
+          for (const grid of grids) {
+            grid.classList.remove("active");
+          }
+          event.currentTarget.classList.add("active");
+        });
+      }
+      let menuLists = document.querySelectorAll(".menu-list");
+      const toggle = (qs) => {
+        document.querySelector(qs).classList.toggle("active");
+      };
+      for (const menuList of menuLists) {
+        menuList.addEventListener("click", (event) => {
+          for (const child of menuList.children) {
+            child.classList.remove("active");
+          }
+          event.target.classList.add("active");
+          if (event.currentTarget.hasAttribute("has-title")) {
+            document.querySelector(
+              event.currentTarget.getAttribute("has-title")
+            ).innerText = event.target.innerText;
+            console.log("lmao");
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
