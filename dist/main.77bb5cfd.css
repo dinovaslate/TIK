@@ -56,6 +56,11 @@ span.ripple {
   position: fixed;
   inset: 0 0 auto 0;
 }
+@media (min-width: 620px) {
+  .navbar {
+    padding: 1rem 2rem;
+  }
+}
 .navbar.border-1 {
   box-shadow: 0 2px 10px 1px #cccccc;
   z-index: 999;
@@ -126,6 +131,11 @@ span.ripple {
   width: 50px;
   border-radius: 50%;
   border: 2px solid #d1b2a5;
+}
+@media (max-width: 620px) {
+  .avatar {
+    display: none !important;
+  }
 }
 
 .sidebar {
@@ -363,13 +373,23 @@ span.ripple {
 }
 
 .main {
-  position: fixed;
   inset: 5.3rem 400px 0 330px;
   padding-inline: 4rem;
 }
 @media (max-width: 1520px) {
   .main {
     inset: 5.3rem 0 0 0;
+  }
+}
+@media (max-width: 620px) {
+  .main {
+    padding-inline: 1rem;
+    padding-block-start: 3rem;
+  }
+}
+@media (min-width: 621px) {
+  .main {
+    position: fixed;
   }
 }
 .main .card-grid {
@@ -380,9 +400,20 @@ span.ripple {
   row-gap: 1rem;
   column-gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
-  overflow-y: auto !important;
+  overflow-y: auto;
   padding-block-end: 2rem;
   padding-inline: 2rem;
+  overflow-x: hidden;
+}
+@media (max-width: 620px) {
+  .main .card-grid {
+    overflow-y: hidden;
+    padding-block-end: 0 !important;
+    max-height: 100% !important;
+    gap: 1rem;
+    padding-inline: 0;
+    padding-inline-start: 0.3rem;
+  }
 }
 .main .card {
   flex-grow: 1;
@@ -392,6 +423,11 @@ span.ripple {
   font-family: "Poppins";
   border-radius: 20px;
   overflow: hidden;
+}
+@media (max-width: 620px) {
+  .main .card {
+    max-width: calc(100vw - 2.5rem);
+  }
 }
 .main .card .card-title {
   background-color: #fff;
@@ -408,6 +444,11 @@ span.ripple {
   font-weight: 900;
   font-size: 23px;
 }
+@media (max-width: 620px) {
+  .main .card .card-title .card-subtitle {
+    font-size: 30px;
+  }
+}
 .main .card .card-image {
   overflow: hidden;
   object-fit: cover;
@@ -418,6 +459,11 @@ span.ripple {
 }
 .main .card .card-image.rotate {
   transform: rotateY(180deg);
+}
+@media (max-width: 640px) {
+  .main .card .card-image {
+    max-width: 20rem;
+  }
 }
 .main .card .card-image-wrapper {
   margin-top: 6.3rem;
@@ -467,6 +513,11 @@ span.ripple {
   font-weight: bold;
   font-family: "Poppins";
   font-size: 26px;
+}
+@media (max-width: 620px) {
+  .main .flex-title .title {
+    font-size: 20px;
+  }
 }
 .main .flex-title .sort {
   font-size: 18px;
@@ -576,6 +627,86 @@ span.ripple {
   color: #000000;
   font-size: 21px;
   font-weight: 800;
+}
+
+.look-out {
+  position: fixed;
+  inset: 0 0 0 auto;
+  height: 100%;
+  border-left: 1px solid #ccc;
+  width: 25rem;
+  background-color: rgba(255, 255, 255, 0.5333333333);
+  padding: 1rem;
+  padding-top: 6rem;
+}
+.look-out .look-out-item {
+  height: max-content;
+  padding: 1rem;
+  border-radius: 30px;
+}
+.look-out .carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 23rem;
+  gap: 1rem;
+}
+.look-out .carousel-images {
+  height: 250px;
+  width: 23rem;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  scroll-snap-type: inline mandatory;
+  cursor: pointer;
+  scrollbar-width: 0;
+}
+.look-out .carousel-images::-webkit-scrollbar {
+  display: none;
+}
+.look-out .carousel-images img {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  height: 300px;
+  width: 23rem;
+  object-fit: cover;
+}
+.look-out .carousel-indicators {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.look-out .carousel-indicators div {
+  height: 12px;
+  width: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  transition: 350ms ease-in-out;
+}
+.look-out .carousel-indicators div.active {
+  height: 12px;
+  width: 24px;
+  border-radius: 10px;
+}
+.look-out .carousel-title {
+  color: #000000;
+  font-family: "Poppins";
+  font-weight: 900;
+  text-align: center;
+  font-size: 21px;
+}
+.look-out .carousel-title .carousel-subtitle {
+  color: #d1b2a5;
+  font-weight: 500;
+}
+
+@media (max-width: 1520px) {
+  .d-none-medium {
+    display: none !important;
+  }
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

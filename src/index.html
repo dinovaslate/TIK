@@ -14,7 +14,7 @@
   <body>
     <div class="navbar border-1">
       <div class="navbar-brand">Shoe.</div>
-      <div style="position: relative">
+      <div style="position: relative" class="d-none-medium">
         <input type="text" class="search-bar" placeholder="Black Sneakers" />
         <i class="fa-solid fa-magnifying-glass search-icon font-inherit"></i>
       </div>
@@ -421,6 +421,33 @@
         </div>
       </div>
     </div>
+    <div class="look-out">
+      <div class="look-out-item">
+        <div class="carousel">
+          <div class="carousel-images" style="scroll-behavior: smooth">
+            <img
+              src="static/sepatu.png"
+              data-index="0"
+              class="carousel-image"
+              alt=""
+            />
+            <img src="static/sepatu.png" class="carousel-image" alt="" />
+            <img src="static/sepatu.png" class="carousel-image" alt="" />
+            <img src="static/sepatu.png" class="carousel-image" alt="" />
+          </div>
+          <div class="carousel-indicators">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="carousel-title">
+            Balenciaga
+            <div class="carousel-subtitle">High Speed Sneakers</div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script>
       window.onload = function () {
         slideOne();
@@ -521,6 +548,42 @@
           }
         });
       }
+    </script>
+    <script>
+      const slider = document.querySelector(".carousel-images");
+      const indicators = document.querySelector(".carousel-indicators");
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+      let index = 0;
+      let prevScroll;
+      (() => {
+        indicators.children[index].classList.add("active");
+      })();
+      slider.addEventListener("scroll", (e) => {});
+
+      slider.addEventListener("mousedown", (e) => {
+        isDown = true;
+        slider.style.cursor = "grabbing";
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+      });
+      slider.addEventListener("mouseleave", () => {
+        isDown = false;
+        slider.style.cursor = "pointer";
+      });
+      slider.addEventListener("mouseup", () => {
+        isDown = false;
+        slider.style.cursor = "pointer";
+      });
+      slider.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        prevScroll = slider.scrollLeft;
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 1;
+        slider.scrollLeft = scrollLeft - walk;
+      });
     </script>
   </body>
 </html>
