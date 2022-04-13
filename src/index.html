@@ -123,14 +123,64 @@
     </div>
     <div class="main">
       <div class="flex-title">
+        <div class="title">Best Seller</div>
+        <div class="sort" onclick="toggle('#menu-sort-2')">
+          <span id="title-2">Top Monthly</span>
+          <i class="fa-solid fa-angle-down font-inherit"></i>
+          <div class="menu-list" id="menu-sort-2" has-title="#title-2">
+            <li class="active">Top Monthly</li>
+            <li>Top Yearly</li>
+            <li>Top Daily</li>
+          </div>
+        </div>
+      </div>
+      <div class="flex-card">
+        <div class="horizontal-card">
+          <div class="card-image">
+            <img src="static/sepatu.png" alt="sepatu">
+          </div>
+          <div class="card-content">
+            <div class="title">Balenciago</div>
+            <div class="content">Price <div class="price">$790</div></div>
+          </div>
+        </div>
+        <div class="horizontal-card">
+          <div class="card-image">
+            <img src="static/sepatu.png" alt="sepatu">
+          </div>
+          <div class="card-content">
+            <div class="title">Balenciago</div>
+            <div class="content">Price <div class="price">$790</div></div>
+          </div>
+        </div>
+        <div class="horizontal-card">
+          <div class="card-image">
+            <img src="static/sepatu.png" alt="sepatu">
+          </div>
+          <div class="card-content">
+            <div class="title">Balenciago</div>
+            <div class="content">Price <div class="price">$790</div></div>
+          </div>
+        </div>
+        <div class="horizontal-card">
+          <div class="card-image">
+            <img src="static/sepatu.png" alt="sepatu">
+          </div>
+          <div class="card-content">
+            <div class="title">Balenciago</div>
+            <div class="content">Price <div class="price">$790</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-title">
         <div class="title">New Arrival</div>
         <div class="sort" onclick="toggle('#menu-sort')">
-          <span id="title-1" onclick="buttonRiple(e)">Sort By Price</span>
+          <span id="title-1">Sort By Price</span>
           <i class="fa-solid fa-angle-down font-inherit"></i>
           <div class="menu-list" id="menu-sort" has-title="#title-1">
             <li>Sort by Newest</li>
             <li>Sort by Popularity</li>
-            <li>Sort by Price</li>
+            <li class="active">Sort by Price</li>
           </div>
         </div>
       </div>
@@ -406,7 +456,7 @@
         });
       }
       let menuLists = document.querySelectorAll(".menu-list");
-      const toggle = (qs) => {
+      const toggle = (qs, event) => {
         document.querySelector(qs).classList.toggle("active");
       };
       for (const menuList of menuLists) {
