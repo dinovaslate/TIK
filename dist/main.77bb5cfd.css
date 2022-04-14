@@ -837,6 +837,10 @@ span.ripple {
   }
 }
 @media (max-width: 620px) {
+  :root {
+    font-size: 13px;
+  }
+
   .d-none-small {
     display: none !important;
   }
