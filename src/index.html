@@ -20,7 +20,7 @@
     <div class="navbar border-1">
       
       <div class="navbar-brand">
-        <i class="fa-solid fa-bars font-inherit d-none-large" onclick="window.toggle('.sidebar'); toggle('.backdrop');" style="margin-right: 1rem;"></i>
+        <i class="fa-solid fa-bars font-inherit d-none-large" onclick="window.toggle('.sidebar'); toggle('.backdrop');" style="margin-right: 1.7rem;margin-top: 1rem;"></i>
         <div style="display: flex;">
           <span style="align-items: flex-start; font-size: 28px;">Slipp</span> <h2 style="align-items: flex-start; margin-top: -5px;">y</h2> <span style="align-items: flex-end; font-size: 28px; margin-top: 15px;">Dripp</span>
         </div>
@@ -30,9 +30,17 @@
         <i class="fa-solid fa-magnifying-glass search-icon font-inherit"></i>
       </div>
       <div class="right-nav">
-        <i class="fa-solid fa-magnifying-glass font-inherit" onclick="toggle('.truncate'); toggle('.navbar-brand'); window.buttonRiple(event)"></i>
+        <i class="fa-solid fa-magnifying-glass d-none-large font-inherit" onclick="toggle('.truncate'); toggle('.navbar-brand'); window.buttonRiple(event)"></i>
         <button class="nav-button d-none-small"  onclick="window.buttonRiple(event)">Login</button>
         <i class="fa-solid fa-arrow-right-to-bracket font-inherit d-block-small"></i>
+        <div class="sort" onclick="window.toggle('#menu-sort-3')">
+          <i class="fa-solid fa-ellipsis-vertical font-inherit" style="margin-top: 2px;"></i>
+          <div class="menu-list right" id="menu-sort-3">
+            <li>Home</li>
+            <li>About</li>
+            <li>Cart</li>
+          </div>
+        </div>
         <div style="position: relative" class="d-none-small">
           <i class="fa-solid fa-bag-shopping font-inherit has-badge"></i>
           <div class="badge">3</div>
@@ -495,6 +503,7 @@
             <div class="description"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam sint, perferendis impedit vel tempore, dolorem libero rerum magni vero quod tempora commodi laborum odit obcaecati quisquam numquam voluptate accusamus eveniet?</div>
             </div>
           </div>
+          <button class="look-out-button"  onclick="window.buttonRiple(event)">Buy Now</button>
         </div>
       </div>
     </div>

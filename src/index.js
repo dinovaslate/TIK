@@ -25,7 +25,7 @@ window.onload = function () {
     const min = range.min ? range.min : 0;
     const max = range.max ? range.max : 100;
     const newVal = Number(((val - min) * 100) / (max - min));
-    bubble.innerHTML = `${val * 20}$`;
+    bubble.innerHTML = `$${val * 20}`;
     bubble.style.left = `calc(${newVal}% + (${10 - newVal * 0.2}px))`;
   }
   
@@ -124,6 +124,6 @@ window.onload = function () {
         e.preventDefault();
         prevScroll = slider.scrollLeft;
         const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 1;
+        const walk = (x - startX) * 3;
         slider.scrollLeft = scrollLeft - walk;
       });
