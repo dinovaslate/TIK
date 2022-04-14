@@ -12,15 +12,28 @@
     ></script>
   </head>
   <body>
+    <div class="backdrop"></div>
+    <div class="backdrop beta"></div>
+    <div class="modal-search">
+      <input type="text" name="" placeholder="Search something" id="">
+    </div>
     <div class="navbar border-1">
-      <div class="navbar-brand">Shoe.</div>
-      <div style="position: relative" class="d-none-medium">
+      
+      <div class="navbar-brand">
+        <i class="fa-solid fa-bars font-inherit d-none-large" onclick="window.toggle('.sidebar'); toggle('.backdrop');" style="margin-right: 1rem;"></i>
+        <div style="display: flex;">
+          <span style="align-items: flex-start; font-size: 28px;">Slipp</span> <h2 style="align-items: flex-start; margin-top: -5px;">y</h2> <span style="align-items: flex-end; font-size: 28px; margin-top: 15px;">Dripp</span>
+        </div>
+      </div>
+      <div style="position: relative" class="truncate">
         <input type="text" class="search-bar" placeholder="Black Sneakers" />
         <i class="fa-solid fa-magnifying-glass search-icon font-inherit"></i>
       </div>
       <div class="right-nav">
-        <button class="nav-button" onclick="buttonRiple(event)">Login</button>
-        <div style="position: relative">
+        <i class="fa-solid fa-magnifying-glass font-inherit" onclick="toggle('.truncate'); toggle('.navbar-brand'); window.buttonRiple(event)"></i>
+        <button class="nav-button d-none-small"  onclick="window.buttonRiple(event)">Login</button>
+        <i class="fa-solid fa-arrow-right-to-bracket font-inherit d-block-small"></i>
+        <div style="position: relative" class="d-none-small">
           <i class="fa-solid fa-bag-shopping font-inherit has-badge"></i>
           <div class="badge">3</div>
         </div>
@@ -70,7 +83,7 @@
             max="100"
             value="100"
             id="slider-1"
-            oninput="slideOne(event)"
+            oninput="window.slideOne(event)"
           />
           <input
             type="range"
@@ -78,7 +91,7 @@
             max="100"
             value="0"
             id="slider-2"
-            oninput="slideTwo(event)"
+            oninput="window.slideTwo(event)"
           />
         </div>
       </div>
@@ -124,7 +137,7 @@
     <div class="main">
       <div class="flex-title">
         <div class="title">Best Seller</div>
-        <div class="sort" onclick="toggle('#menu-sort-2')">
+        <div class="sort" onclick="window.toggle('#menu-sort-2')">
           <span id="title-2">Top Monthly</span>
           <i class="fa-solid fa-angle-down font-inherit"></i>
           <div class="menu-list" id="menu-sort-2" has-title="#title-2">
@@ -186,8 +199,8 @@
       </div>
       <div class="flex-title">
         <div class="title">New Arrival</div>
-        <div class="sort" onclick="toggle('#menu-sort')">
-          <span id="title-1" onclick="buttonRiple(e)">Sort By Price</span>
+        <div class="sort" onclick="window.toggle('#menu-sort')">
+          <span id="title-1" onclick="window.buttonRiple(e)">Sort By Price</span>
           <i class="fa-solid fa-angle-down font-inherit"></i>
           <div class="menu-list" id="menu-sort" has-title="#title-1">
             <li>Sort by Newest</li>
@@ -197,7 +210,7 @@
         </div>
       </div>
       <div class="card-grid">
-        <div class="card">
+        <div class="card" onclick="toggle('.look-out'); toggle('.beta'); toggle('body');">
           <div class="card-title">
             High Speed Sneakers
             <div class="card-subtitle">Balenciaga</div>
@@ -215,7 +228,7 @@
               <div class="price">$790</div>
             </div>
             <div class="right-footer">
-              <div class="image-box" onclick="buttonRiple(event, '#ccc')">
+              <div class="image-box" onclick="window.buttonRiple(event, '#ccc')">
                 <img
                   src="static/sepatu.png"
                   class="reflect-left"
@@ -223,7 +236,7 @@
                   width="40"
                 />
               </div>
-              <div class="image-box" onclick="buttonRiple(event, '#ccc')">
+              <div class="image-box" onclick="window.buttonRiple(event, '#ccc')">
                 <img
                   src="static/sepatu.png"
                   class="reflect-right"
@@ -252,7 +265,7 @@
               <div class="price">$790</div>
             </div>
             <div class="right-footer">
-              <div class="image-box" onclick="buttonRiple(event, '#ccc')">
+              <div class="image-box" onclick="window.buttonRiple(event, '#ccc')">
                 <img
                   src="static/sepatu.png"
                   class="reflect-left"
@@ -260,7 +273,7 @@
                   width="40"
                 />
               </div>
-              <div class="image-box" onclick="buttonRiple(event, '#ccc')">
+              <div class="image-box" onclick="window.buttonRiple(event, '#ccc')">
                 <img
                   src="static/sepatu.png"
                   class="reflect-right"
@@ -289,7 +302,7 @@
               <div class="price">$790</div>
             </div>
             <div class="right-footer">
-              <div class="image-box" onclick="buttonRiple(event, '#ccc')">
+              <div class="image-box" onclick="window.buttonRiple(event, '#ccc')">
                 <img
                   src="static/sepatu.png"
                   class="reflect-left"
@@ -297,7 +310,7 @@
                   width="40"
                 />
               </div>
-              <div class="image-box" onclick="buttonRiple(event, '#ccc')">
+              <div class="image-box" onclick="window.buttonRiple(event, '#ccc')">
                 <img
                   src="static/sepatu.png"
                   class="reflect-right"
@@ -326,7 +339,7 @@
               <div class="price">$790</div>
             </div>
             <div class="right-footer">
-              <div class="image-box" onclick="buttonRiple(event, '#ccc')">
+              <div class="image-box" onclick="window.buttonRiple(event, '#ccc')">
                 <img
                   src="static/sepatu.png"
                   class="reflect-left"
@@ -334,7 +347,7 @@
                   width="40"
                 />
               </div>
-              <div class="image-box" onclick="buttonRiple(event, '#ccc')">
+              <div class="image-box" onclick="window.buttonRiple(event, '#ccc')">
                 <img
                   src="static/sepatu.png"
                   class="reflect-right"
@@ -363,7 +376,7 @@
               <div class="price">$790</div>
             </div>
             <div class="right-footer">
-              <div class="image-box" onclick="buttonRiple(event, '#ccc')">
+              <div class="image-box" onclick="window.buttonRiple(event, '#ccc')">
                 <img
                   src="static/sepatu.png"
                   class="reflect-left"
@@ -371,7 +384,7 @@
                   width="40"
                 />
               </div>
-              <div class="image-box" onclick="buttonRiple(event, '#ccc')">
+              <div class="image-box" onclick="window.buttonRiple(event, '#ccc')">
                 <img
                   src="static/sepatu.png"
                   class="reflect-right"
@@ -400,7 +413,7 @@
               <div class="price">$790</div>
             </div>
             <div class="right-footer">
-              <div class="image-box" onclick="buttonRiple(event, '#ccc')">
+              <div class="image-box" onclick="window.buttonRiple(event, '#ccc')">
                 <img
                   src="static/sepatu.png"
                   class="reflect-left"
@@ -408,7 +421,7 @@
                   width="40"
                 />
               </div>
-              <div class="image-box" onclick="buttonRiple(event, '#ccc')">
+              <div class="image-box" onclick="window.buttonRiple(event, '#ccc')">
                 <img
                   src="static/sepatu.png"
                   class="reflect-right"
@@ -422,7 +435,8 @@
       </div>
     </div>
     <div class="look-out">
-      <div class="look-out-item">
+      <i class="fa-solid fa-square-xmark font-inherit close-btn fa-2x" onclick="toggle('.look-out'); toggle('.beta'); toggle('body')"></i>
+      <div class="look-out-item" style="margin-top: -50px">
         <div class="carousel">
           <div class="carousel-images" style="scroll-behavior: smooth">
             <img
@@ -441,149 +455,50 @@
             <div></div>
             <div></div>
           </div>
+
           <div class="carousel-title">
             Balenciaga
             <div class="carousel-subtitle">High Speed Sneakers</div>
           </div>
         </div>
+        <div class="look-out-item">
+          <div class="accordion">
+            <div class="accordion-head">
+              Categories
+              <i class="fa-solid fa-angle-down font-inherit"></i>
+            </div>
+            <div class="accordion-body no-padding">
+              <div class="grid col-5" style="margin-top: 0.1rem;">
+                <div class="grid-item">35</div>
+                <div class="grid-item">36</div>
+                <div class="grid-item">37</div>
+                <div class="grid-item">38</div>
+                <div class="grid-item">39</div>
+              </div>
+            </div>
+            <div class="accordion-head">
+              Composition
+              <i class="fa-solid fa-angle-down font-inherit"></i>
+            </div>
+            <div class="accordion-body no-padding">
+              <div class="grid col-3" style="margin-top: 0.1rem;">
+                <div class="grid-item Composition"><div class="title">100</div>POLYGON</div>
+                <div class="grid-item Composition"><div class="title">200</div>RUBBER</div>
+                <div class="grid-item Composition"><div class="title">300</div>SYNTHETIC</div>
+              </div>
+            </div>
+            <div class="accordion-head">
+              Description
+              <i class="fa-solid fa-angle-down font-inherit"></i>
+            </div>
+            <div class="accordion-body no-padding" >
+            <div class="description"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam sint, perferendis impedit vel tempore, dolorem libero rerum magni vero quod tempora commodi laborum odit obcaecati quisquam numquam voluptate accusamus eveniet?</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <script>
-      window.onload = function () {
-        slideOne();
-        slideTwo();
-      };
-
-      let sliderOne = document.getElementById("slider-1");
-      let sliderTwo = document.getElementById("slider-2");
-
-      let minGap = 0;
-      let sliderTrack = document.querySelector(".slider-track");
-      let sliderMaxValue = document.getElementById("slider-1").max;
-
-      function slideOne(e) {
-        let values = document.querySelector("#label-1");
-        setBubble(sliderOne, values);
-        fillColor();
-      }
-      function slideTwo() {
-        let values = document.querySelector("#label-2");
-        setBubble(sliderTwo, values);
-
-        fillColor();
-      }
-      function setBubble(range, bubble) {
-        const val = range.value;
-        const min = range.min ? range.min : 0;
-        const max = range.max ? range.max : 100;
-        const newVal = Number(((val - min) * 100) / (max - min));
-        bubble.innerHTML = `${val * 20}$`;
-        bubble.style.left = `calc(${newVal}% + (${10 - newVal * 0.2}px))`;
-      }
-      const buttonRiple = (event, color = "#fff6") => {
-        ripple(event.currentTarget, event, 20, color);
-      };
-      function fillColor() {
-        percent1 = (sliderOne.value / sliderMaxValue) * 100;
-        percent2 = (sliderTwo.value / sliderMaxValue) * 100;
-        if (percent2 < percent1) {
-          let temp = percent1;
-          percent1 = percent2;
-          percent2 = temp;
-        }
-        sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #3264fe ${percent1}% , #3264fe ${percent2}%, #dadae5 ${percent2}%)`;
-      }
-      function ripple(parent, event, maxScale, color) {
-        parent.style.position = "relative";
-        parent.style.overflow = "hidden";
-        const rect = parent.getBoundingClientRect();
-        const ripple = document.createElement("span");
-        ripple.classList.add("ripple");
-        ripple.style.left = `${event.clientX - rect.x}px`;
-        ripple.style.top = `${event.clientY - rect.y}px`;
-        ripple.style.setProperty("--size", maxScale);
-        ripple.style.setProperty("--color", color);
-        const hasripple = parent.getElementsByClassName("ripple")[0];
-        if (hasripple) {
-          hasripple.remove();
-        }
-        parent.appendChild(ripple);
-        setTimeout(() => {
-          ripple.remove();
-        }, 1200);
-      }
-      let accheads = document.querySelectorAll(".accordion-head");
-      for (const acchead of accheads) {
-        acchead.addEventListener("click", (event) => {
-          acchead.classList.toggle("active");
-          acchead.nextSibling.nextSibling.classList.toggle("active");
-          ripple(event.currentTarget, event, 100, "#ccc");
-        });
-      }
-      let grids = document.querySelectorAll(".grid-item");
-      for (const grid of grids) {
-        grid.addEventListener("click", (event) => {
-          ripple(event.currentTarget, event, 20, "#fff");
-          for (const grid of grids) {
-            grid.classList.remove("active");
-          }
-          event.currentTarget.classList.add("active");
-        });
-      }
-      let menuLists = document.querySelectorAll(".menu-list");
-      const toggle = (qs) => {
-        document.querySelector(qs).classList.toggle("active");
-      };
-      for (const menuList of menuLists) {
-        menuList.addEventListener("click", (event) => {
-          for (const child of menuList.children) {
-            child.classList.remove("active");
-          }
-          event.target.classList.add("active");
-          if (event.currentTarget.hasAttribute("has-title")) {
-            document.querySelector(
-              event.currentTarget.getAttribute("has-title")
-            ).innerText = event.target.innerText;
-            console.log("lmao");
-          }
-        });
-      }
-    </script>
-    <script>
-      const slider = document.querySelector(".carousel-images");
-      const indicators = document.querySelector(".carousel-indicators");
-      let isDown = false;
-      let startX;
-      let scrollLeft;
-      let index = 0;
-      let prevScroll;
-      (() => {
-        indicators.children[index].classList.add("active");
-      })();
-      slider.addEventListener("scroll", (e) => {});
-
-      slider.addEventListener("mousedown", (e) => {
-        isDown = true;
-        slider.style.cursor = "grabbing";
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-      });
-      slider.addEventListener("mouseleave", () => {
-        isDown = false;
-        slider.style.cursor = "pointer";
-      });
-      slider.addEventListener("mouseup", () => {
-        isDown = false;
-        slider.style.cursor = "pointer";
-      });
-      slider.addEventListener("mousemove", (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        prevScroll = slider.scrollLeft;
-        const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 1;
-        slider.scrollLeft = scrollLeft - walk;
-      });
+    <script src="index.js">
     </script>
   </body>
 </html>
