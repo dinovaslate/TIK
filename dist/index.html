@@ -15,11 +15,12 @@
       <input type="text" name="" placeholder="Search something" id="">
     </div>
     <div class="navbar border-1">
-      
       <div class="navbar-brand">
-        <i class="fa-solid fa-bars font-inherit d-none-large" onclick="window.toggle('.sidebar'); toggle('.backdrop');" style="margin-right: 1.7rem;margin-top: 1rem;"></i>
-        <div style="display: flex;">
-          <span style="align-items: flex-start; font-size: 28px;">Slipp</span> <h2 style="align-items: flex-start; margin-top: -5px;">y</h2> <span style="align-items: flex-end; font-size: 28px; margin-top: 15px;">Dripp</span>
+        <i class="fa-solid fa-bars font-inherit d-none-large" onclick="window.toggle('.sidebar'); toggle('.backdrop');" style="margin-right: 1.7rem; margin-top: 1rem"></i>
+        <div style="display: flex">
+          <span style="align-items: flex-start; font-size: 28px">Slipp</span>
+          <h2 style="align-items: flex-start; margin-top: -5px">y</h2>
+          <span style="align-items: flex-end; font-size: 28px; margin-top: 15px">Dripp</span>
         </div>
       </div>
       <div style="position: relative" class="truncate">
@@ -28,10 +29,12 @@
       </div>
       <div class="right-nav">
         <i class="fa-solid fa-magnifying-glass d-none-large font-inherit" onclick="toggle('.truncate'); toggle('.navbar-brand'); window.buttonRiple(event)"></i>
-        <button class="nav-button d-none-small" onclick="window.buttonRiple(event)">Login</button>
+        <button class="nav-button d-none-small" onclick="window.buttonRiple(event)">
+          Login
+        </button>
         <i class="fa-solid fa-arrow-right-to-bracket font-inherit d-block-small"></i>
         <div class="sort" onclick="window.toggle('#menu-sort-3')">
-          <i class="fa-solid fa-ellipsis-vertical font-inherit" style="margin-top: 2px;"></i>
+          <i class="fa-solid fa-ellipsis-vertical font-inherit" style="margin-top: 2px"></i>
           <div class="menu-list right" id="menu-sort-3">
             <li>Home</li>
             <li>About</li>
@@ -52,28 +55,24 @@
           <i class="fa-solid fa-angle-down font-inherit"></i>
         </div>
         <div class="accordion-body">
-          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+          <input type="checkbox" data-filter-type="type" data-filter-name="Flip flops" onchange="handleChange(this)" id="vehicle1" name="vehicle1" value="Bike">
           <label for="vehicle1"> Flip flops</label><br>
-          <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+          <input type="checkbox" onchange="handleChange(this)" id="sneakers" data-filter-type="type" data-filter-name="sneakers" name="vehicle2" value="Car">
           <label for="vehicle2"> Sneakers</label><br>
-          <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+          <input type="checkbox" data-filter-type="type" data-filter-name="Lace up Shoes" onchange="handleChange(this)" id="vehicle3" name="vehicle3" value="Boat">
           <label for="vehicle3"> Lace-up Shoes</label><br>
-          <input type="checkbox" id="vehicle4" name="vehicle4" value="Boat">
-          <label for="vehicle3">Shoe Accessories </label>
         </div>
         <div class="accordion-head">
           Brand
           <i class="fa-solid fa-angle-down font-inherit"></i>
         </div>
         <div class="accordion-body">
-          <input type="checkbox" id="Nike" name="Nike" value="Bike">
+          <input type="checkbox" data-filter-type="brand" data-filter-name="Nike" onchange="handleChange(this)" id="Nike" name="Nike" value="Bike">
           <label for="Nike"> Nike</label><br>
-          <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+          <input type="checkbox" data-filter-type="brand" data-filter-name="Adidas" onchange="handleChange(this)" id="vehicle2" name="vehicle2" value="Car">
           <label for="vehicle2"> Adidas</label><br>
-          <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+          <input type="checkbox" data-filter-type="brand" data-filter-name="Rebook" onchange="handleChange(this)" id="vehicle3" name="vehicle3" value="Boat">
           <label for="vehicle3"> Rebook</label><br>
-          <input type="checkbox" id="vehicle4" name="vehicle4" value="Boat">
-          <label for="vehicle3">Jordan </label>
         </div>
       </div>
       <div class="sidebar-item">
@@ -88,7 +87,7 @@
       </div>
       <div class="sidebar-item">
         <div class="sidebar-item-title">Size</div>
-        <div class="grid col-5">
+        <div class="grid col-5" id="filterSize">
           <div class="grid-item">35</div>
           <div class="grid-item">36</div>
           <div class="grid-item">37</div>
@@ -127,266 +126,61 @@
     </div>
     <div class="main">
       <div class="flex-title">
-        <div class="title">Best Seller</div>
-        <div class="sort" onclick="window.toggle('#menu-sort-2')">
-          <span id="title-2">Top Monthly</span>
-          <i class="fa-solid fa-angle-down font-inherit"></i>
-          <div class="menu-list" id="menu-sort-2" has-title="#title-2">
-            <li class="active">Top Monthly</li>
-            <li>Top Yearly</li>
-            <li>Top Daily</li>
-          </div>
-        </div>
+        <div class="title">Best Sellers</div>
       </div>
-      <div class="flex-card">
-        <div class="horizontal-card">
-          <div class="card-image">
-            <img src="/sepatu.d89a6d5a.png" alt="sepatu">
-          </div>
-          <div class="card-content">
-            <div class="title">Balenciago</div>
-            <div class="content">
-              Price
-              <div class="price">$790</div>
-            </div>
-          </div>
-        </div>
-        <div class="horizontal-card">
-          <div class="card-image">
-            <img src="/sepatu.d89a6d5a.png" alt="sepatu">
-          </div>
-          <div class="card-content">
-            <div class="title">Balenciago</div>
-            <div class="content">
-              Price
-              <div class="price">$790</div>
-            </div>
-          </div>
-        </div>
-        <div class="horizontal-card">
-          <div class="card-image">
-            <img src="/sepatu.d89a6d5a.png" alt="sepatu">
-          </div>
-          <div class="card-content">
-            <div class="title">Balenciago</div>
-            <div class="content">
-              Price
-              <div class="price">$790</div>
-            </div>
-          </div>
-        </div>
-        <div class="horizontal-card">
-          <div class="card-image">
-            <img src="/sepatu.d89a6d5a.png" alt="sepatu">
-          </div>
-          <div class="card-content">
-            <div class="title">Balenciago</div>
-            <div class="content">
-              Price
-              <div class="price">$790</div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="flex-card"></div>
       <div class="flex-title">
         <div class="title">New Arrival</div>
         <div class="sort" onclick="window.toggle('#menu-sort')">
-          <span id="title-1" onclick="window.buttonRiple(e)">Sort By Price</span>
+          <span id="title-1" onclick="window.buttonRiple(event)">Sort By Price</span>
           <i class="fa-solid fa-angle-down font-inherit"></i>
           <div class="menu-list" id="menu-sort" has-title="#title-1">
-            <li>Sort by Newest</li>
-            <li>Sort by Popularity</li>
-            <li>Sort by Price</li>
+            <li data-sort="name" class="sortable">Sort by Name</li>
+            <li data-sort="price" class="sortable">Sort by Price</li>
           </div>
         </div>
       </div>
-      <div class="card-grid">
-        <div class="card" onclick="toggle('.look-out'); toggle('.beta'); toggle('body');">
-          <div class="card-title">
-            High Speed Sneakers
-            <div class="card-subtitle">Balenciaga</div>
-          </div>
-          <div class="card-image-wrapper">
-            <img src="/sepatu.d89a6d5a.png" class="card-image rotate" alt="sepatu">
-          </div>
-          <div class="card-footer">
-            <div class="card-price">
-              Price
-              <div class="price">$790</div>
-            </div>
-            <div class="right-footer">
-              <div class="image-box" onclick="window.buttonRiple(event, '#ccc')">
-                <img src="/sepatu.d89a6d5a.png" class="reflect-left" alt="sepatu" width="40">
-              </div>
-              <div class="image-box" onclick="window.buttonRiple(event, '#ccc')">
-                <img src="/sepatu.d89a6d5a.png" class="reflect-right" alt="sepatu" width="40">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-title">
-            High Speed Sneakers
-            <div class="card-subtitle">Balenciaga</div>
-          </div>
-          <div class="card-image-wrapper">
-            <img src="/sepatu.d89a6d5a.png" class="card-image rotate" alt="sepatu">
-          </div>
-          <div class="card-footer">
-            <div class="card-price">
-              Price
-              <div class="price">$790</div>
-            </div>
-            <div class="right-footer">
-              <div class="image-box" onclick="window.buttonRiple(event, '#ccc')">
-                <img src="/sepatu.d89a6d5a.png" class="reflect-left" alt="sepatu" width="40">
-              </div>
-              <div class="image-box" onclick="window.buttonRiple(event, '#ccc')">
-                <img src="/sepatu.d89a6d5a.png" class="reflect-right" alt="sepatu" width="40">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-title">
-            High Speed Sneakers
-            <div class="card-subtitle">Balenciaga</div>
-          </div>
-          <div class="card-image-wrapper">
-            <img src="/sepatu.d89a6d5a.png" class="card-image rotate" alt="sepatu">
-          </div>
-          <div class="card-footer">
-            <div class="card-price">
-              Price
-              <div class="price">$790</div>
-            </div>
-            <div class="right-footer">
-              <div class="image-box" onclick="window.buttonRiple(event, '#ccc')">
-                <img src="/sepatu.d89a6d5a.png" class="reflect-left" alt="sepatu" width="40">
-              </div>
-              <div class="image-box" onclick="window.buttonRiple(event, '#ccc')">
-                <img src="/sepatu.d89a6d5a.png" class="reflect-right" alt="sepatu" width="40">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-title">
-            High Speed Sneakers
-            <div class="card-subtitle">Balenciaga</div>
-          </div>
-          <div class="card-image-wrapper">
-            <img src="/sepatu.d89a6d5a.png" class="card-image rotate" alt="sepatu">
-          </div>
-          <div class="card-footer">
-            <div class="card-price">
-              Price
-              <div class="price">$790</div>
-            </div>
-            <div class="right-footer">
-              <div class="image-box" onclick="window.buttonRiple(event, '#ccc')">
-                <img src="/sepatu.d89a6d5a.png" class="reflect-left" alt="sepatu" width="40">
-              </div>
-              <div class="image-box" onclick="window.buttonRiple(event, '#ccc')">
-                <img src="/sepatu.d89a6d5a.png" class="reflect-right" alt="sepatu" width="40">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-title">
-            High Speed Sneakers
-            <div class="card-subtitle">Balenciaga</div>
-          </div>
-          <div class="card-image-wrapper">
-            <img src="/sepatu.d89a6d5a.png" class="card-image rotate" alt="sepatu">
-          </div>
-          <div class="card-footer">
-            <div class="card-price">
-              Price
-              <div class="price">$790</div>
-            </div>
-            <div class="right-footer">
-              <div class="image-box" onclick="window.buttonRiple(event, '#ccc')">
-                <img src="/sepatu.d89a6d5a.png" class="reflect-left" alt="sepatu" width="40">
-              </div>
-              <div class="image-box" onclick="window.buttonRiple(event, '#ccc')">
-                <img src="/sepatu.d89a6d5a.png" class="reflect-right" alt="sepatu" width="40">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-title">
-            High Speed Sneakers
-            <div class="card-subtitle">Balenciaga</div>
-          </div>
-          <div class="card-image-wrapper">
-            <img src="/sepatu.d89a6d5a.png" class="card-image rotate" alt="sepatu">
-          </div>
-          <div class="card-footer">
-            <div class="card-price">
-              Price
-              <div class="price">$790</div>
-            </div>
-            <div class="right-footer">
-              <div class="image-box" onclick="window.buttonRiple(event, '#ccc')">
-                <img src="/sepatu.d89a6d5a.png" class="reflect-left" alt="sepatu" width="40">
-              </div>
-              <div class="image-box" onclick="window.buttonRiple(event, '#ccc')">
-                <img src="/sepatu.d89a6d5a.png" class="reflect-right" alt="sepatu" width="40">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="card-grid"></div>
     </div>
     <div class="look-out">
       <i class="fa-solid fa-square-xmark font-inherit close-btn fa-2x" onclick="toggle('.look-out'); toggle('.beta'); toggle('body')"></i>
       <div class="look-out-item" style="margin-top: -50px">
         <div class="carousel">
-          <div class="carousel-images" style="scroll-behavior: smooth">
-            <img src="/sepatu.d89a6d5a.png" data-index="0" class="carousel-image" alt="">
-            <img src="/sepatu.d89a6d5a.png" class="carousel-image" alt="">
-            <img src="/sepatu.d89a6d5a.png" class="carousel-image" alt="">
-            <img src="/sepatu.d89a6d5a.png" class="carousel-image" alt="">
-          </div>
-          <div class="carousel-indicators">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
+          <div class="carousel-images" id="add-images" style="scroll-behavior: smooth"></div>
+          <div class="carousel-indicators" id="add-indicators"></div>
 
           <div class="carousel-title">
-            Balenciaga
-            <div class="carousel-subtitle">High Speed Sneakers</div>
+            <span id="add-title"></span>
+            <div class="carousel-subtitle" id="add-subtitle"></div>
           </div>
         </div>
         <div class="look-out-item">
           <div class="accordion">
             <div class="accordion-head">
-              Categories
+              Sizes
               <i class="fa-solid fa-angle-down font-inherit"></i>
             </div>
             <div class="accordion-body no-padding">
-              <div class="grid col-5" style="margin-top: 0.1rem;">
-                <div class="grid-item">35</div>
-                <div class="grid-item">36</div>
-                <div class="grid-item">37</div>
-                <div class="grid-item">38</div>
-                <div class="grid-item">39</div>
-              </div>
+              <div class="grid col-5" id="add-sizes" style="margin-top: 0.1rem"></div>
             </div>
             <div class="accordion-head">
               Composition
               <i class="fa-solid fa-angle-down font-inherit"></i>
             </div>
             <div class="accordion-body no-padding">
-              <div class="grid col-3" style="margin-top: 0.1rem;">
-                <div class="grid-item Composition"><div class="title">100</div>POLYGON</div>
-                <div class="grid-item Composition"><div class="title">200</div>RUBBER</div>
-                <div class="grid-item Composition"><div class="title">300</div>SYNTHETIC</div>
+              <div class="grid col-3" style="margin-top: 0.1rem">
+                <div class="grid-item Composition">
+                  <div class="title">100</div>
+                  POLYGON
+                </div>
+                <div class="grid-item Composition">
+                  <div class="title">200</div>
+                  RUBBER
+                </div>
+                <div class="grid-item Composition">
+                  <div class="title">300</div>
+                  SYNTHETIC
+                </div>
               </div>
             </div>
             <div class="accordion-head">
@@ -394,14 +188,17 @@
               <i class="fa-solid fa-angle-down font-inherit"></i>
             </div>
             <div class="accordion-body no-padding">
-            <div class="description"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam sint, perferendis impedit vel tempore, dolorem libero rerum magni vero quod tempora commodi laborum odit obcaecati quisquam numquam voluptate accusamus eveniet?</div>
+              <div class="description" id="add-description"></div>
             </div>
           </div>
-          <button class="look-out-button" onclick="window.buttonRiple(event)">Buy Now</button>
+          <button class="look-out-button" onclick="window.buttonRiple(event)">
+            Buy Now
+          </button>
         </div>
       </div>
     </div>
-    <script src="/src.e31bb0bc.js">
-    </script>
+    <script src="/src.e31bb0bc.js"></script>
+    <script src="/controller.6d20a26e.js"></script>
+    <script></script>
   </body>
 </html>

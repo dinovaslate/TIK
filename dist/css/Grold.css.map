@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,UAAU;EACN,WAAW,EAAE,KAAK;EAClB,GAAG,EAAE,oCAAoC;EACzC,WAAW,EAAE,GAAG;EAChB,UAAU,EAAE,MAAM;;;AAEtB,UAAU;EACN,WAAW,EAAE,KAAK;EAClB,GAAG,EAAE,gCAAgC;EACrC,WAAW,EAAC,GAAG;EACf,UAAU,EAAE,MAAM",
+    "sources": [
+        "../../src/scss/Grold.scss"
+    ],
+    "names": [],
+    "file": "Grold.css"
+}

@@ -1,0 +1,14 @@
+@font-face {
+  font-family: Grold;
+  src: url(../static/Grold-BoldItalic.woff);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Grold;
+  src: url(../static/Grold-Italic.woff);
+  font-weight: 500;
+  font-style: normal;
+}
+/*# sourceMappingURL=Grold.css.map */
