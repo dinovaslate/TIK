@@ -114,6 +114,9 @@ const proxy = new Proxy(Shoes, {
         if (arguments[0] === "price") {
           target.ClearFilter("price");
         }
+        if (localStorage.getItem("filter")) {
+          target.filter = JSON.parse(localStorage.getItem("filter"));
+        }
         target[prop].apply(this, arguments);
         target.filter_array();
         if (target.sort) {
@@ -181,6 +184,7 @@ window.addEventListener("load", () => {
   renderCard();
   setTopProduct();
   lookOut("Air Max 97");
+  localStorage.removeItem("filter");
 });
 
 const sorts = document.querySelectorAll(".sortable");

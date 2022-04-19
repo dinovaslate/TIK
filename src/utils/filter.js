@@ -20,6 +20,7 @@ export default function AddFilter(filters, strictMode) {
       this.filter[type] = [];
     },
     filter_array() {
+      console.log(this);
       this.processedState = this.state.filter((state) => {
         let bool = true;
         for (const [key, values] of Object.entries(this.filter)) {

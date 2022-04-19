@@ -229,6 +229,7 @@ function AddFilter(filters, strictMode) {
       filter_array: function filter_array() {
         var _this = this;
 
+        console.log(this);
         this.processedState = this.state.filter(function (state) {
           var bool = true;
 
@@ -523,6 +524,10 @@ var proxy = new Proxy(Shoes, {
           target.ClearFilter("price");
         }
 
+        if (localStorage.getItem("filter")) {
+          target.filter = JSON.parse(localStorage.getItem("filter"));
+        }
+
         target[prop].apply(this, arguments);
         target.filter_array();
 
@@ -600,6 +605,7 @@ window.addEventListener("load", function () {
   renderCard();
   setTopProduct();
   lookOut("Air Max 97");
+  localStorage.removeItem("filter");
 });
 var sorts = document.querySelectorAll(".sortable");
 
@@ -653,7 +659,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "9148" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "7461" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

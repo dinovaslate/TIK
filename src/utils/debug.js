@@ -108,6 +108,9 @@ function AddFilter(filters, strictMode) {
         this.filter[type].splice(index, 1);
       }
     },
+    ClearFilter(type) {
+      this.filter[type] = [];
+    },
     filter_array() {
       this.processedState = this.state.filter((state) => {
         let bool = true;
@@ -155,18 +158,8 @@ function FilterAndSortedState(init, filtersToAdd, strictMode) {
   obj = Object.assign(obj, AddFilter(filtersToAdd, strictMode));
   obj = Object.assign(obj, AddSort());
 
-  debugger;
-  obj.AddFilter("sizes", "41");
-  obj.AddFilter("price", "60-500");
-  obj.filter_array();
-  obj.sort_array("price", "ASC");
-  console.log(obj.processedState);
-  debugger;
-  obj.sort_array("brand", "ASC");
-  console.log(obj.processedState);
-  debugger;
+  return obj;
 }
-
 const obj = FilterAndSortedState(
   API,
   {
@@ -177,3 +170,36 @@ const obj = FilterAndSortedState(
   },
   true
 );
+const proxy = new Proxy(obj, {
+  get(target, prop, receiver) {
+    if (prop === "AddFilter" || prop === "RemoveFilter") {
+      return function () {
+        if (arguments[0] === "price") {
+          target.ClearFilter("price");
+        }
+        debugger;
+        target[prop].apply(target, arguments);
+        target.filter_array();
+        if (target.sort) {
+          target.sort_array(target.sort);
+        }
+        debugger;
+      };
+    }
+    if (prop === "sort_array") {
+      return function () {
+        debugger;
+        target[prop].apply(target, arguments);
+        debugger;
+      };
+    }
+
+    return target[prop];
+  },
+});
+
+proxy.AddFilter("sizes", "41");
+proxy.sort_array("brand");
+proxy.AddFilter("price", "0-200");
+proxy.RemoveFilter("price", "0-200");
+console.log(proxy.processedState);
